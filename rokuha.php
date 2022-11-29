@@ -1,4 +1,4 @@
-/* rokuha.php v0.0
+// rokuha.php v0.0
 This script is a modified version of gazou.php from Let's PHP!, and futaba.php from <http://www.2chan.net/script/>.
 The distribution conditions are the same as Let's PHP!, so feel free to modify and redistribute it.
 Please do not send questions about this script to Let's PHP! or Futaba
@@ -8,8 +8,8 @@ Installation:
 - Modify config.php to set the imageboard to your desires. (PLEASE CHANGE ADMIN_PASS!)
 - Visit the website and go to the rokuha board's folder and succeed the folder name with rokuha.php or what was specified in PHP_SELF.
 - If all gone well, the site will build by itself and you will see an imageboard.
-- Enjoy your imageboard!
-*/
+- Enjoy your imageboard! //
+
 <?php require('repositories.php'); ?>
 <?php require('models.php'); ?>
 <?php require ('config.php'); ?>
