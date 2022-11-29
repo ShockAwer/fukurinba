@@ -1,15 +1,3 @@
-// rokuha.php v0.0
-This script is a modified version of gazou.php from Let's PHP!, and futaba.php from <http://www.2chan.net/script/>.
-The distribution conditions are the same as Let's PHP!, so feel free to modify and redistribute it.
-Please do not send questions about this script to Let's PHP! or Futaba
-The latest version is distributed at <http://www.6channel.net/script/> please go there!
-Installation:
-- Copy rokuha-master.zip to your webserver and extract it
-- Modify config.php to set the imageboard to your desires. (PLEASE CHANGE ADMIN_PASS!)
-- Visit the website and go to the rokuha board's folder and succeed the folder name with rokuha.php or what was specified in PHP_SELF.
-- If all gone well, the site will build by itself and you will see an imageboard.
-- Enjoy your imageboard! //
-
 <?php require('repositories.php'); ?>
 <?php require('models.php'); ?>
 <?php require ('config.php'); ?>
@@ -39,12 +27,12 @@ function form(&$dat,$resno,$admin=""){
   if($resno){
     $msg .= "[<a href=\"".PHP_SELF2."\">Return to BBS</a>]\n";
     $msg .= "<table width='100%'><tr><th bgcolor=#e04000>\n";
-    $msg .= "<font color=#FFFFFF>RRS</font>\n";
+    $msg .= "<font color=#FFFFFF>Reply</font>\n";
     $msg .= "</th></tr></table>\n";
   }
   if($admin){
     $hidden = "<input type=hidden name=admin value=\"".ADMIN_PASS."\">";
-    $msg = "<h4>You can use html tags in here.</h4>";
+    $msg = "<h4>HTML tags are allowed.</h4>";
   }
 
   $dat.=$msg.'<center>
@@ -853,7 +841,7 @@ function regist($name,$email,$sub,$comment,$url,$pwd,$upfile,$upfile_name,$resto
   updatelog();
 
   echo "<html><head><meta charset=\"UTF-8\"><meta http-equiv=\"refresh\" content=\"1;URL=".PHP_SELF2."\"></head>";
-  echo "<body>$mes 画面を切り替えます</body></html>";
+  echo "<body>$mes The screen will change.</body></html>";
 }
 ?>
 
