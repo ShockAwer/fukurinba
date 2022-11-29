@@ -1,9 +1,9 @@
-# futaba.php
+# rokuha.php
 
-futaba.php is Message board scripts.
-
+rokuha.php is an imageboard script.
+It is a faithful translation and fork of the modern Futaba script.
 I branched script to this repository.
-Is script used in http://www.2chan.net/.
+Is script used in http://www.6channel.net/.
 
 This script aims running with PHP 5.4.15 or later...
 
@@ -12,12 +12,20 @@ This script aims running with PHP 5.4.15 or later...
 - PHP 5.4.15 or later
 
 ```
+Grunt:
 > cd app
 > grunt concat:model
 > grunt concat:futaba
 > grunt shell:phpRunning
 ```
-
+XAMPP:
+> C:/xampp
+> extract rokuha-master
+> delete htdocs and rename rokuha-master to htdocs
+Git:
+> git clone ssh://git@github.com:ShockAwer/rokuha.git
+Github CMD:
+>gh repo clone ShockAwer/rokuha
 # ToDo
 
 Script charactor code is UTF-8, But previous code is Shift-JIS. 
