@@ -44,7 +44,7 @@ function form(&$dat,$resno,$admin=""){
   }
   if($admin){
     $hidden = "<input type=hidden name=admin value=\"".ADMIN_PASS."\">";
-    $msg = "<h4>You can grab the tag</h4>";
+    $msg = "<h4>You can use html tags in here.</h4>";
   }
 
   $dat.=$msg.'<center>
