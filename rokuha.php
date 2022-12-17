@@ -60,7 +60,7 @@ function form(&$dat,$resno,$admin=""){
     [<label><input type=checkbox name=textonly value=on>Post without image</label>]</td></tr>';
   }
 
-  $dat.='<tr><td bgcolor=#eeaa88><b>Password for deletion</b></td><td><input type=password name=pwd size=8 maxlength=8 value=""><small>(You have to remember this so you can delete your posts. Alphanumeric characters, up to 8 characters)</small></td></tr>
+  $dat.='<tr><td bgcolor=#eeaa88><b>Delkey</b></td><td><input type=password name=pwd size=8 maxlength=8 value=""><small>(You have to remember this so you can delete your posts. Alphanumeric characters, up to 8 characters)</small></td></tr>
   <tr><td colspan=2>
   <small>
   <LI>Supported file extensions: GIF, JPG, PNG. Some browsers may not attach files properly.
