@@ -12,7 +12,7 @@ define("PAGE_DEF", '5'); //posts to display on one page
 define("LOG_MAX", '500'); //maximum number of log lines
 define("ADMIN_PASS", 'admin_pass'); //admin_pass (CHANGE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
 define("RE_COL", '789922'); //color when > is attached, a.k.a the color of Greentext
-define("PHP_SELF", 'nutaba.php'); //name of the php script
+define("PHP_SELF", 'momoha.php'); //name of the php script
 define("PHP_SELF2", 'index.html'); //name of the html page it builds
 define("PHP_EXT", '.html'); //extension after page 1
 define("RENZOKU", '5'); //continuous post seconds
