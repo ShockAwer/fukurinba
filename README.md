@@ -1,9 +1,8 @@
-# rokuha.php
+# momoha.php
 
-rokuha.php is an imageboard script.
+momoha.php is an imageboard script.
 It is a faithful translation and fork of the modern Futaba script, adding features from modern Futaba Channel, 2channel, and ease-of-modification features aswell as translating it into English so non-Japanese can enjoy it.
 I branched script to this repository.
-Is script used in http://www.6channel.net/.
 
 This script aims running with PHP 5.4.15 or later...
 
@@ -17,22 +16,22 @@ Requirements:
 Grunt:
 > cd app
 > grunt concat:model
-> grunt concat:futaba
+> grunt concat:momoha
 > grunt shell:phpRunning
 ```
 XAMPP:
 ```
 > C:/xampp
-> extract rokuha-master
-> delete htdocs and rename rokuha-master to htdocs
+> extract momoha-master
+> delete htdocs and rename momoha-master to htdocs
 ```
 Git:
 ```
-> git clone ssh://git@github.com:ShockAwer/rokuha.git
+> git clone ssh://git@github.com:ShockAwer/momha.git
 ```
 Github CMD:
 ```
->gh repo clone ShockAwer/rokuha
+>gh repo clone ShockAwer/momoha
 ```
 # ToDo
 
