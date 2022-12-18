@@ -320,8 +320,8 @@ Deleteキー<input type=password name=pwd size=8 maxlength=8 value="">
 function foot(&$dat){
   $dat.='
 <center>
-<small><!-- GazouBBS v3.0 --><!-- ふたば改0.8 -->
-- <a href=http://php.loglog.jp/bbs/bbs3.php" target=_top>GazouBBS</a> + <a href="http://www.2chan.net/" target=_top>futaba</a> + <a href="https://github.com/ShockAwer/nutaba" target=_top>nutaba</a>-
+<small><!-- GazouBBS v3.0 --><!-- ふたば改0.8 --><!-- 百葉改0.2 -->
+- <a href=http://php.loglog.jp/bbs/bbs3.php" target=_top>GazouBBS</a> + <a href="http://www.2chan.net/" target=_top>futaba</a> + <a href="https://github.com/ShockAwer/momoha" target=_top>momoha</a>-
 </small>
 </center>
 </body></html>';
