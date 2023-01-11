@@ -4,6 +4,9 @@ define("TREEFILE", 'tree.log'); //log file name
 define("IMG_DIR", 'src/'); //image storage directory, as seen from futaba.php
 define("THUMB_DIR",'thumb/'); //thumbnail storage directory
 define("TITLE", 'Image BBS'); //title (<title> and TOP)
+define("NANASHI", 'Anonymous'); //Name of nameless posters
+define("KITA", 'ｷﾀ━━━━━━(ﾟ∀ﾟ)━━━━━━!'); // Text shown if user has entered none
+define("CHAGRIN", 'No Subject'); // Subject shown if user has entered none
 define("HOME", './'); //link to "Home
 define("MAX_KB", '500'); //posting space limit KB (up to 2M by php setting)
 define("MAX_W", '250'); //Post size width (any more than this, reduce width)
