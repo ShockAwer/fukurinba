@@ -667,13 +667,13 @@ function regist($name,$email,$sub,$comment,$url,$pwd,$upfile,$upfile_name,$resto
 
   //Alright alright, Anonymous is cooler, but this is more accurate to Futaba
   if(!$name){
-    $name="Unnamed";
+    $name=$NANSHI;
   }
   if(!$comment){
-    $comment="ｷﾀ━━━(・∀・)━━━!!";
+    $comment=$KITA;
   }
   if(!$sub){
-    $sub="Untitled"; 
+    $sub=$CHAGRIN; 
   }
 
   //ログ読み込み
