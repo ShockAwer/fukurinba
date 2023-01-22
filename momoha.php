@@ -149,9 +149,9 @@ function updatelog($resno=0){
       }
       else{//それ以外
         $imgsrc = "<a href=\"".$src."\" target=_blank><img src=".$src.
-      " border=0 align=left hspace=20 alt=\"".$size." B\"></a>";
+      " border=0 align=left hspace=20 alt=\"".$size." bytes\"></a>";
       }
-      $dat.="Image data: <a href=\"$src\" target=_blank>$time$ext</a>-($size B)<br>$imgsrc";
+      $dat.="Image title: <a href=\"$src\" target=_blank>$time$ext</a>-($size bytes) [<a href=\"https://imgops.com\$src\" target=_blank>ImgOps</a><br>$imgsrc";
     }
 
     // CREATION!!! 
