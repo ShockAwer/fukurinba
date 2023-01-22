@@ -64,7 +64,7 @@ function form(&$dat,$resno,$admin=""){
   <tr><td colspan=2>
   <small>
   <LI>Supported file extensions: GIF, JPG, PNG. Some browsers may not attach files properly.
-  <LI>You can upload up to '.MAX_KB.' KB. Make note of the sage function.
+  <LI>You can upload up to '.MAX_KB.' KB. You can avoid bumping a thread by putting "sage" in the e-mail field.
   <LI>Images will be thumbnailed if they exceed '.MAX_W.'x'.MAX_H.' pixels.
   '.$addinfo.'</small></td></tr></table></form></center><hr>';
 }
@@ -189,7 +189,8 @@ function updatelog($resno=0){
       list($no,$now,$name,$email,$sub,$com,$url,
            $host,$pwd,$ext,$w,$h,$time,$chk) = explode(",", $line[$j]);
       // URLとメールにリンク
-      if($email) $name = "<a href=\"mailto:$email\">$name</a>";
+      if(!$email == sage) $name = "<a href=\"mailto:$email\">$name</a>";
+      if($email == sage) $name = "$name (saged)";
       $com = auto_link($com);
       $com = preg_replace("/(^|>)(&gt;[^<]*)/i", "\\1<font color=".RE_COL.">\\2</font>", $com);
 
@@ -220,7 +221,7 @@ function updatelog($resno=0){
         // メイン作成
         $dat.="<table border=0><tr><td nowrap align=right valign=top>…</td><td bgcolor=#F0E0D6 nowrap>\n";
         $dat.="<input type=checkbox name=\"$no\" value=delete><font color=#cc1105 size=+1><b>$sub</b></font> \n";
-        $dat.="Name <font color=#117743><b>$name</b></font> $now No.$no &nbsp; \n";
+        $dat.="Name <font color=#117743><b>$name</b></font> $now Post #$no &nbsp; \n";
         $dat.="$imgsrc<blockquote>$com</blockquote>";
         $dat.="</td></tr></table>\n";
       }
