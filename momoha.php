@@ -48,9 +48,10 @@ function form(&$dat,$resno,$admin=""){
 
   $dat.='<table cellpadding=1 cellspacing=1>
   <tr><td bgcolor=#eeaa88><b>Name</b></td><td><input type=text name=name size="28"></td></tr>
-  <tr><td bgcolor=#eeaa88><b>E-mail</b></td><td><input type=text name=email size="28"></td></tr>
+  <tr><td bgcolor=#eeaa88><b>E-mail</b></td><td><input type=text class="email" name=email size="28"></td></tr>
   <tr><td bgcolor=#eeaa88><b>Title</b></td><td><input type=text name=sub size="35">
-  <input type=submit value="Post"></td></tr>
+  
+  <input type=submit value="Post"><input type="button" class="sage" data-value="sage" value="sage"/></td></tr>
   <tr><td bgcolor=#eeaa88><b>Body</b></td><td><textarea name=com cols="48" rows="4" wrap=soft></textarea></td></tr>
   ';
 
@@ -151,12 +152,12 @@ function updatelog($resno=0){
         $imgsrc = "<a href=\"".$src."\" target=_blank><img src=".$src.
       " border=0 align=left hspace=20 alt=\"".$size." bytes\"></a>";
       }
-      $dat.="Image title: <a href=\"$src\" target=_blank>$time$ext</a>-($size bytes) [<a href=\"https://imgops.com\$src\" target=_blank>ImgOps</a><br>$imgsrc";
+      $dat.="Image title: <a href=\"$src\" target=_blank>$time$ext</a>-($size bytes) [<a href=\"https://imgops.com\.$src.\" target=_blank>ImgOps</a>]<br>$imgsrc";
     }
 
     // CREATION!!! 
     $dat.="<input type=checkbox name=\"$no\" value=delete><font color=#cc1105 size=+1><b>$sub</b></font> \n";
-    $dat.="Name <font color=#117743><b>$name</b></font> $now No.$no &nbsp; \n";
+    $dat.="Name <font color=#117743><b>$name</b></font> $now Post #$no &nbsp; \n";
     if(!$resno) $dat.="[<a href=".PHP_SELF."?res=$no>Reply</a>]";
     $dat.="\n<blockquote>$com</blockquote>";
 
@@ -190,7 +191,7 @@ function updatelog($resno=0){
            $host,$pwd,$ext,$w,$h,$time,$chk) = explode(",", $line[$j]);
       // URLとメールにリンク
       if(!$email == sage) $name = "<a href=\"mailto:$email\">$name</a>";
-      if($email == sage) $name = "$name (saged)";
+      if($email == sage) $name = "$name <i>(saged)</i>";
       $com = auto_link($com);
       $com = preg_replace("/(^|>)(&gt;[^<]*)/i", "\\1<font color=".RE_COL.">\\2</font>", $com);
 
@@ -221,7 +222,7 @@ function updatelog($resno=0){
         // メイン作成
         $dat.="<table border=0><tr><td nowrap align=right valign=top>…</td><td bgcolor=#F0E0D6 nowrap>\n";
         $dat.="<input type=checkbox name=\"$no\" value=delete><font color=#cc1105 size=+1><b>$sub</b></font> \n";
-        $dat.="Name <font color=#117743><b>$name</b></font> $now Post #$no &nbsp; \n";
+        $dat.="Name <font color=#117743><b>$name</b></font> $now <b>Reply</b> - Post #$no &nbsp; \n";
         $dat.="$imgsrc<blockquote>$com</blockquote>";
         $dat.="</td></tr></table>\n";
       }
@@ -235,7 +236,7 @@ function updatelog($resno=0){
 
     $dat.='<table align=right><tr><td nowrap align=center>
 <input type=hidden name=mode value=usrdel>"Delete Post" [<input type=checkbox name=onlyimgdel value=on>Delete Image]<br>
-Deleteキー<input type=password name=pwd size=8 maxlength=8 value="">
+Delkey<input type=password name=pwd size=8 maxlength=8 value="">
 <input type=submit value="Delete!"></form></td></tr></table>';
 
     if(!$resno){ //res時は表示しない
@@ -484,7 +485,7 @@ function thumb($path,$tim,$ext){
 
 <?php
 /**
- * Publish to rokuha borad.
+ * Publish to momoha borad.
  *
  * @params string $name user name.
  * @params string $email user email address.
@@ -598,7 +599,7 @@ function regist($name,$email,$sub,$comment,$url,$pwd,$upfile,$upfile_name,$resto
     }
   }
 
-  if(preg_match("/^mail/i",$host)
+  if(!preg_match("/^mail/i",$host)
     || preg_match("/^ns/i",$host)
     || preg_match("/^dns/i",$host)
     || preg_match("/^ftp/i",$host)
@@ -608,7 +609,7 @@ function regist($name,$email,$sub,$comment,$url,$pwd,$upfile,$upfile_name,$resto
     $pxck = "on";
   }
 
-  if(preg_match("/ne\\.jp$/i",$host)||
+  if(!preg_match("/ne\\.jp$/i",$host)||
     preg_match("/ad\\.jp$/i",$host)||
     preg_match("/bbtec\\.net$/i",$host)||
     preg_match("/aol\\.com$/i",$host)||
@@ -668,14 +669,18 @@ function regist($name,$email,$sub,$comment,$url,$pwd,$upfile,$upfile_name,$resto
 
   //Alright alright, Anonymous is cooler, but this is more accurate to Futaba
   if(!$name){
-    $name=$NANSHI;
+    $name = NANSHI;
   }
   if(!$comment){
-    $comment=$KITA;
+    $comment=KITA;
   }
-  if(!$sub){
-    $sub=$CHAGRIN; 
+  if(subject_needed == 1){
+   if(!$sub){
+    $sub=CHAGRIN; 
   }
+  }    
+
+ 
 
   //ログ読み込み
   $fp=fopen(LOGFILE,"r+");
@@ -842,7 +847,7 @@ function regist($name,$email,$sub,$comment,$url,$pwd,$upfile,$upfile_name,$resto
   updatelog();
 
   echo "<html><head><meta charset=\"UTF-8\"><meta http-equiv=\"refresh\" content=\"1;URL=".PHP_SELF2."\"></head>";
-  echo "<body>$mes The screen will change.</body></html>";
+  echo "<body>$mes The screen will change in a few seconds.</body></html>";
 }
 ?>
 
@@ -1140,7 +1145,7 @@ function admindel($pass){
   echo "<input type=hidden name=pass value=\"$pass\">\n";
   echo "<center><P>Check the checkboxes of the posts you wish to delete and press the Delete button.\n";
   echo "<p><input type=submit value=\"Image\">";
-  echo "<input type=reset value=\"リセット\">";
+  echo "<input type=reset value=\"Reset\">";
   echo "[<input type=checkbox name=onlyimgdel value=on>Image]";
   echo "<P><table border=1 cellspacing=0>\n";
   echo "<tr bgcolor=6080f6><th>Delete</th><th>No.</th><th>Submitted</th><th>Title</th>";
@@ -1214,6 +1219,7 @@ function head(&$dat){
   $dat.='<html><head>
 <meta charset="UTF-8"/>
 <!-- meta HTTP-EQUIV="pragma" CONTENT="no-cache" -->
+<script src="/momoha.js"></script>
 <STYLE TYPE="text/css">
 <!--
 body,tr,td,th { font-size:12pt }
@@ -1233,7 +1239,9 @@ function l(e){var P=getCookie("pwdc"),N=getCookie("namec"),i;with(document){for(
 [<a href="'.PHP_SELF.'?mode=admin">Adminstration</a>]
 <p align=center>
 <font color="#800000" size=5>
-<b><SPAN>'.TITLE.'</SPAN></b></font>
+<b><SPAN>'.TITLE.'</SPAN></b></font><br>
+<font color="#800000">
+'.SUBTITLE.'</font>
 <hr width="90%" size=1>
 ';
 }
