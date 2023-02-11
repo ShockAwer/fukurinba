@@ -1,3 +1,6 @@
+# discontinued
+because i did something retarded and lost all of the php code for it and now i'm angry as fuck because i worked on a shitton in the days i lost and its unrestorable
+whoopsies
 # momoha.php
 
 momoha.php is an imageboard script.
