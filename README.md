@@ -1,10 +1,8 @@
-# discontinued
-because i did something retarded and lost all of the php code for it and now i'm angry as fuck because i worked on a shitton in the days i lost and its unrestorable
-whoopsies
 # momoha.php
 
 momoha.php is an imageboard script.
-It is a faithful translation and fork of the modern Futaba script, adding features from modern Futaba Channel, 2channel, and ease-of-modification features aswell as translating it into English so non-Japanese can enjoy it.
+It is a faithful translation and fork of the modern Futaba script. On the way, we will be adding the modern features of 4chan, Futaba Channel, and on and on.... you can make it just like Futaba, Futaba and 4chan, or just plain vanilla Futaba. 
+**Currently barely complete lol**
 I branched script to this repository.
 
 This script aims running with PHP 5.4.15 or later...
@@ -65,4 +63,3 @@ I'm in accordance with the distribution of the [Futaba license](http://www.2chan
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/futoase/futaba-ng/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
