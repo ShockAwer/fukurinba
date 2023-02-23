@@ -1,9 +1,9 @@
 # momoha.php
 
 momoha.php is an imageboard script.
-It is a faithful translation and fork of the modern Futaba script. On the way, we will be adding the modern features of 4chan, Futaba Channel, and on and on.... you can make it just like Futaba, Futaba and 4chan, or just plain vanilla Futaba. 
+It is a faithful translation and fork of the modern Futaba script. On the way, we will be adding the modern features of 4chan, Futaba Channel, and on and on.... you can make it just like Futaba, Futaba and 4chan, or just plain vanilla Futaba. (Hell, you could even make it Futaba Uploader-styled like /f/ if you want.)
 
-**Currently barely complete lol**
+But currently none of this is possible because it's.... **Currently barely complete lol**
 
 I branched script to this repository.
 
