@@ -1,6 +1,6 @@
-# momoha.php
+# fukurinba.php
 
-momoha.php is an imageboard script.
+fukurinba.php is an imageboard script.
 It is a faithful translation and fork of the modern Futaba script. On the way, we will be adding the modern features of 4chan, Futaba Channel, and on and on.... you can make it just like Futaba, Futaba and 4chan, or just plain vanilla Futaba. (Hell, you could even make it Futaba Uploader-styled like /f/ if you want.)
 
 But currently none of this is possible because it's.... **Currently barely complete lol**
@@ -19,22 +19,22 @@ Requirements:
 Grunt:
 > cd app
 > grunt concat:model
-> grunt concat:momoha
+> grunt concat:fukurinba
 > grunt shell:phpRunning
 ```
 XAMPP:
 ```
 > C:/xampp
-> extract momoha-master
+> extract fukurinba-master
 > delete htdocs and rename momoha-master to htdocs
 ```
 Git:
 ```
-> git clone ssh://git@github.com:ShockAwer/momha.git
+> git clone ssh://git@github.com:ShockAwer/fukurinba.git
 ```
 Github CMD:
 ```
->gh repo clone ShockAwer/momoha
+>gh repo clone ShockAwer/fukurinba
 ```
 # ToDo
 
