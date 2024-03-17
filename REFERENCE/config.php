@@ -3,9 +3,9 @@ define("LOGFILE", 'img.log'); //log file name
 define("TREEFILE", 'tree.log'); //log file name
 define("IMG_DIR", 'src/'); //image storage directory, as seen from futaba.php
 define("THUMB_DIR",'thumb/'); //thumbnail storage directory
-define("TITLE", 'Image BBS'); //title (<title> and TOP)
-define("SUBTITLE", 'Momoha sample imagebbs'); //subtitle (appears under title on TOP)
-define("NANSHI", 'Anonymous'); //Name of nameless posters
+define("TITLE", 'Fukurinba BBS'); //title (<title> and TOP)
+define("SUBTITLE", 'Fukurinba out of the Box'); //subtitle (appears under title on TOP)
+define("NANSHI", 'Toshiaki'); //Name of nameless posters
 define("KITA", 'ｷﾀ━━━━━━(ﾟ∀ﾟ)━━━━━━!'); // Text shown if user has entered none
 define("CHAGRIN", 'No Subject'); // Subject shown if user has entered none
 define ("subject_needed", 0); //Add default subject if none entered?: 1, Don't: 0
@@ -17,7 +17,6 @@ define("PAGE_DEF", '5'); //posts to display on one page
 define("LOG_MAX", '500'); //maximum number of log lines
 define("ADMIN_PASS", 'admin_pass'); //admin_pass (CHANGE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
 define("RE_COL", '789922'); //color when > is attached, a.k.a the color of Greentext
-define("PHP_SELF", 'momoha.php'); //name of the php script
 define("PHP_SELF2", 'index.html'); //name of the html page it builds
 define("PHP_EXT", '.html'); //extension after page 1
 define("RENZOKU", '5'); //continuous post seconds

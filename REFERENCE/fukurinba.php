@@ -1,6 +1,7 @@
 <?php require('repositories.php'); ?>
 <?php require('models.php'); ?>
-<?php require ('config.php'); ?>
+<?php require ('config.php');
+define("PHP_SELF", $_SERVER['SCRIPT_NAME']); //name of the php script ?>
 <?php
 extract($_POST,EXTR_SKIP);
 extract($_GET,EXTR_SKIP);
